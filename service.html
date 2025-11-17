@@ -1,0 +1,869 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Catalyst Tech Academy - Your Path To Experiential Learning, Growth and Resources</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Roboto:wght@500;700&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+	
+	
+    <script>
+
+    const buttonLinks = {
+		
+    btnpowerbi: 	{ US: "https://buy.stripe.com/14k7uVgh95bKdmo01b", 
+				  	  EU: "https://buy.stripe.com/9AQ6qRe910Vudmo3do", 
+				  	  AFRICA: "https://buy.stripe.com/8wM4iJ9SL5bK0zC5lx" },  
+	btnexcel: 		{ US: "https://buy.stripe.com/aEU7uV0ib9s05TW5ls", 
+			     	  EU: "https://buy.stripe.com/3csbLbc0T47G8245lt",  
+					  AFRICA: "https://buy.stripe.com/dR65mNd4X1Zy6Y05lu" },	  
+    btnpython: 		{ US: "https://buy.stripe.com/5kAdTj5CvfQo968eVZ",  
+					  EU: "https://buy.stripe.com/3cs3eFc0T5bKeqs9BG", 
+					  AFRICA: "https://buy.stripe.com/4gw02td4XbA82HK6pv" },  
+	btnr: 			{ US: "https://buy.stripe.com/cN27uVgh9aw44PSdRS",      
+					  EU: "https://buy.stripe.com/fZe4iJ0ib47Geqs3df", 
+					  AFRICA: "https://buy.stripe.com/9AQ5mNc0T47G2HK9BE" },	  
+    btnrdbms: 		{ US: "https://buy.stripe.com/7sIeXnd4XgUs0zCaFD",  
+					  EU: "https://buy.stripe.com/7sI16x7KD9s04PS010", 
+					  AFRICA: "https://buy.stripe.com/eVa2aB6GzeMk2HKbJJ" },  
+	btnbm: 			{ US: "https://buy.stripe.com/3cscPf6Gz33C824aFA",     
+					  EU: "https://buy.stripe.com/4gw5mNe915bKdmoeVR",  
+					  AFRICA: "https://buy.stripe.com/00g4iJe91dIg3LO296" },
+    btndatascience: { US: "https://buy.stripe.com/bIY3eF7KD8nW1DGaFx",  
+					  EU: "https://buy.stripe.com/28oeXnfd59s04PS5le",  
+					  AFRICA: "https://buy.stripe.com/9AQ5mNd4XfQo1DGcNH" },  
+	btnaccelerated: { US: "https://buy.stripe.com/00gdTj8OH47Gdmo3d2",  
+					  EU: "https://buy.stripe.com/6oE7uV4yrdIgcikfZP",  
+					  AFRICA: "https://buy.stripe.com/dR63eFgh97jS4PS00S" },
+    btnfront: 		{ US: "https://buy.stripe.com/28o8yZ0ibaw4eqs9AZ",  
+					  EU: "https://buy.stripe.com/aEU7uV1mf0Vu1DG00q",  
+					  AFRICA: "https://buy.stripe.com/aEUg1r6Gz1ZygyA14v" },  
+	btnback:	 	{ US: "https://buy.stripe.com/7sI2aB4yrdIg1DG00s",   
+					  EU: "https://buy.stripe.com/14k7uV9SL33C0zC3cF",  
+					  AFRICA: "https://buy.stripe.com/14k3eFaWPgUseqscNg" },
+	btnfullstack: 	{ US: "https://buy.stripe.com/4gwbLb0ib0Vu2HKeVp", 
+					  EU: "https://buy.stripe.com/eVa7uV4yrcEc0zC6oU", 
+					  AFRICA: "https://buy.stripe.com/5kA3eF3unbA8aacaFb" },	
+	btnsoftware: 	{ US: "https://buy.stripe.com/4gwg1re9133C0zC6oW", 
+					  EU: "https://buy.stripe.com/bIY4iJ7KDaw41DGdRp",  
+					  AFRICA: "https://buy.stripe.com/5kA3eFgh98nW1DGaFe" }, 
+	btnpt: 			{ US: "https://buy.stripe.com/fZe2aBgh9gUsbegcNn", 
+					  EU: "https://buy.stripe.com/5kA9D3d4X33C82400C", 
+					  AFRICA: "https://buy.stripe.com/bIY2aBfd5aw43LO9Bd" }, 
+	btnhealth: 		{ US: "https://buy.stripe.com/7sIbLb5CvdIgcik15l", 
+					  EU: "https://buy.stripe.com/7sI6qR4yr5bK0zC8xL", 
+					  AFRICA: "https://buy.stripe.com/cN2dTj8OHgUscik8xK" }, 
+	btncb: 			{ US: "https://buy.stripe.com/8wMg1r2qjbA8eqsbJv", 
+					  EU: "https://buy.stripe.com/aEUcPf4yraw482414S",  
+					  AFRICA: "https://buy.stripe.com/fZecPf5CvgUs0zC00P" }	
+	
+  };
+		
+
+    // Get user's region (using a free IP API)
+    async function getUserRegion() {
+      try {
+        const response = await fetch('https://ipapi.co/json/');
+        const data = await response.json();
+        const country = data.country_code;
+        
+        // Simple mapping country -> region
+        if (country === 'US') return 'US';
+        if (['DE', 'FR', 'ES', 'IT', 'NL'].includes(country)) return 'EU';
+        if (['GH', 'NG', 'KE', 'ZW', 'ZM', 'ZA', 'RW', 'MA', 'ET', 'EG'].includes(country)) return 'AFRICA';
+        
+        return 'US'; // Default fallback
+      } catch (error) {
+        console.error('Error detecting region, defaulting to US', error);
+        return 'US';
+      }
+    }
+
+    // Main redirect function
+    async function handleButtonClick(buttonId) {
+      const region = await getUserRegion();
+      const link = buttonLinks[buttonId][region];
+      if (link) {
+        window.location.href = link;
+      } else {
+        alert('No link found for your region.');
+      }
+    }
+  </script>
+	
+</head>
+	
+<body>																										
+
+	<!-- Spinner Start -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border text-secondary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <!-- Spinner End -->
+
+    <!-- Topbar Start -->
+    <div class="container-fluid bg-light d-none d-lg-block">
+        <div class="row align-items-center top-bar">
+
+            <div class="col-lg-3 col-md-12 text-center text-lg-start">
+
+                 <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+                    <img src="logo.png" alt="" style="float:left";>
+    
+                    <h2 class="m-0 text-secondary"><i class="img/"> &nbsp; </i>Catalyst Tech Academy</h2>
+                </a>
+            </div>
+
+
+            <div class="col-lg-9 col-md-12 text-end">
+                <div class="h-100 d-inline-flex align-items-center me-4">
+                    <i class="fa fa-map-marker-alt text-secondary me-2"></i>
+                    <p class="m-0">Massachusetts, USA</p>
+                </div>
+                <div class="h-100 d-inline-flex align-items-center me-4">
+                    <i class="far fa-envelope-open text-secondary me-2"></i>
+                    <p class="m-0">info@catalysttech.tech</p>
+                </div>
+                <div class="h-100 d-inline-flex align-items-center">
+                    <a class="btn btn-sm-square bg-white text-secondary me-1" href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-sm-square bg-white text-secondary me-1" href="#"><i class="fab fa-twitter"></i></a>
+                    <a class="btn btn-sm-square bg-white text-secondary me-1" href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a class="btn btn-sm-square bg-white text-secondary me-0" href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Topbar End -->
+	
+	
+    <!-- Navbar Start -->
+    <div class="container-fluid nav-bar bg-light">
+        <nav class="navbar navbar-expand-lg navbar-light bg-white p-3 py-lg-0 px-lg-4">
+            <a href="" class="navbar-brand d-flex align-items-center m-0 p-0 d-lg-none">
+                <h1 class="text-secondary m-0">Catalyst</h1>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="fa fa-bars"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav me-auto">
+                    <a href="index.html" class="nav-item nav-link active">Home</a>
+                    <a href="about.html" class="nav-item nav-link">About</a>
+                    <a href="service.html" class="nav-item nav-link">Programs</a>
+					<a href="kids-code.html" class="nav-item nav-link">Kids-Code</a>
+                    <a href="contact.html" class="nav-item nav-link">Contact</a>
+                </div>
+                <div class="mt-4 mt-lg-0 me-lg-n4 py-3 px-4 bg-dark d-flex align-items-center">
+                    <div class="d-flex flex-shrink-0 align-items-center justify-content-center bg-white" style="width: 45px; height: 45px;">
+                        <i class="fa fa-phone-alt text-secondary"></i>
+                    </div>
+                    <div class="ms-3">
+                        <p class="mb-1 text-white">+1-774-329-6133</p>
+                     </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <!-- Navbar End -->
+
+
+
+	   <!-- Page Header Start -->
+    <div class="container-fluid page-header mb-5 py-5">
+        <div class="container">
+            <h1 class="display-3 text-white mb-3 animated slideInDown">Programs</h1>
+            <nav aria-label="breadcrumb animated slideInDown">
+                <ol class="breadcrumb text-uppercase">
+                    <li class="breadcrumb-item"><a class="text-white" href="#">Home</a></li>
+                    <li class="breadcrumb-item"><a class="text-white" href="#">Pages</a></li>
+                    <li class="breadcrumb-item text-white active" aria-current="page">Programs</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+    <!-- Page Header End -->	
+	
+	
+	
+    <!-- Service Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6 service-item-top wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="overflow-hidden">
+                        <img class="img-fluid w-100 h-100" src="img/Service-A.png" alt="">
+                    </div>
+                    <div class="d-flex align-items-center justify-content-between bg-light p-4">
+                        <h5 class="text-truncate me-3 mb-0">Kids-Code Training Program</h5>
+                        <a class="btn btn-square btn-outline-primary border-2 border-white flex-shrink-0" href="/kids-code.html"><i class="fa fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 service-item-top wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="overflow-hidden">
+                        <img class="img-fluid w-100 h-100" src="img/Service-B.png" alt="">
+                    </div>
+                    <div class="d-flex align-items-center justify-content-between bg-light p-4">
+                        <h5 class="text-truncate me-3 mb-0">Career Coaching & Mentorship</h5>
+                        <a class="btn btn-square btn-outline-primary border-2 border-white flex-shrink-0" href="/service.html#Exclusive-Services"><i class="fa fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 service-item-top wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="overflow-hidden">
+                        <img class="img-fluid w-100 h-100" src="img/Service-C.png" alt="">
+                    </div>
+                    <div class="d-flex align-items-center justify-content-between bg-light p-4">
+                        <h5 class="text-truncate me-3 mb-0">Certifications & Exams Prep</h5>
+                        <a class="btn btn-square btn-outline-primary border-2 border-white flex-shrink-0" href="/service.html#Exponential-Solutions"><i class="fa fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Service End -->
+
+
+    <!-- Service Start A-->
+	<section id="Exponential-Solutions" class="Exponential-Solutions">
+		
+    <div class="container-fluid py-5 px-4 px-lg-0">
+        <div class="row g-0">
+            <div class="col-lg-3 d-none d-lg-flex">
+                <div class="d-flex align-items-center justify-content-center bg-dark w-100 h-100">
+                    <h1 class="display-3 text-white m-0" style="transform: rotate(-90deg);">Exponential Solutions</h1>
+                </div>
+            </div>
+            <div class="col-md-12 col-lg-9">
+                <div class="ms-lg-5 ps-lg-5">
+                    <div class="text-center text-lg-start wow fadeInUp" data-wow-delay="0.1s">
+                        <h6 class="text-secondary text-uppercase">Data Engineering & Anaysis</h6>
+                        <h1 class="text-dark mb-5">Explore Our Courses</h1>
+                    </div>
+					
+                    <div class="owl-carousel service-carousel position-relative wow fadeInUp" data-wow-delay="0.1s">
+                        
+                        <div class="bg-light p-4">
+                            <div class="d-flex align-items-center justify-content-center border border-5 border-white mb-4" style="width: 75px; height: 75px;">
+								 <a class="btn btn-square border-transparent"><i class="fa fa-graduation-cap fa-2x" ></i></a>
+								
+                                     </div>
+							
+                            <h4 class="mb-3">Data Visualization Using Power BI</h4>
+                            <p class="mb-3" style="text-align:justify;">Learn the essential Power BI skills needed to become acertified data analyst and how to prepare, model, and visualize data using Power BI's powerful features.</p>
+							
+                            <p class="text fw-medium"><i class="fa fa-check me-2"></i>Real-World Datasets Usage</p>
+                            <p class="text fw-medium"><i class="fa fa-check me-2"></i>PL-300 Exam Preparation</p>
+                            <p class="text fw-medium"><i class="fa fa-check me-2"></i>Data Modeling With DAX</p>
+							<p class="text fw-medium"><i class="fa fa-check me-2"></i>Power Query Editor Usage</p>
+							<p class="text fw-medium"><i class="fa fa-check me-2"></i>Graph Design & Dashboard</p>
+							<p class="text fw-medium"><i class="fa fa-clock me-2"></i>Duration: (4 Weeks)</p>
+
+                            <button onclick="handleButtonClick('btnpowerbi')" class="btn btn-primary text-white w-100 mt-2">Proceed to Pay<i class="fa fa-arrow-right text-white ms-2"></i></button>
+                        </div>
+
+
+						
+						
+                        <div class="bg-light p-4">
+                            <div class="d-flex align-items-center justify-content-center border border-5 border-white mb-4" style="width: 75px; height: 75px;">
+                                <a class="btn btn-square border-transparent"><i class="fa fa-graduation-cap fa-2x"></i></a>
+                            </div>
+                            <h4 class="mb-3">Data Representation Using Excel</h4>
+                            <p class="mb-3" style="text-align:justify;">You will learn how to extract valuable insights and uncover values hidden within your data using the power of pivotTables & workflows.</p>
+							
+                            <p class="text fw-medium"><i class="fa fa-check me-2"></i>Intermediate Logical Funtions</p>
+                            <p class="text fw-medium"><i class="fa fa-check me-2"></i>Pivotable Exploration of Data</p>
+                            <p class="text fw-medium"><i class="fa fa-check me-2"></i>Using the What-If Protocol</p>
+							<p class="text fw-medium"><i class="fa fa-check me-2"></i>Data Forecasting & Prediction</p>
+							<p class="text fw-medium"><i class="fa fa-check me-2"></i>Using Conditional Formatting</p>
+							<p class="text fw-medium"><i class="fa fa-clock me-2"></i>Duration: (4 Weeks)</p>
+							
+							
+                            <button onclick="handleButtonClick('btnexcel')" class="btn btn-primary text-white w-100 mt-2">Proceed to Pay<i class="fa fa-arrow-right text-white ms-2"></i></button>
+                        </div>						
+												
+						
+                        <div class="bg-light p-4">
+                            <div class="d-flex align-items-center justify-content-center border border-5 border-white mb-4" style="width: 75px; height: 75px;">
+                                <a class="btn btn-square border-transparent"><i class="fa fa-graduation-cap fa-2x"></i></a>
+                            </div>
+                            <h4 class="mb-3">Python Object-Oriented Programming</h4>
+                            <p class="mb-3" style="text-align:justify;">Build and scale up your foundational data analytical skills with our advanced tools python developer course solely designed for beginners to experts level.</p>
+							
+                            <p class="text fw-medium"><i class="fa fa-check me-2"></i>Quality & Efficient Code</p>
+                            <p class="text fw-medium"><i class="fa fa-check me-2"></i>Data Extraction & Scrapping</p>
+                            <p class="text fw-medium"><i class="fa fa-check me-2"></i>Version COntrol Using Git</p>
+							<p class="text fw-medium"><i class="fa fa-check me-2"></i>Python Object-Orieted Prog.</p>
+							<p class="text fw-medium"><i class="fa fa-check me-2"></i>Data Optimization & Profiling</p>
+							<p class="text fw-medium"><i class="fa fa-clock me-2"></i>Duration: (6 Weeks)</p>
+							
+							
+                            <button onclick="handleButtonClick('btnpython')" class="btn btn-primary text-white w-100 mt-2">Proceed to Pay<i class="fa fa-arrow-right text-white ms-2"></i></button>
+                        </div>
+
+										
+                        <div class="bg-light p-4">
+                            <div class="d-flex align-items-center justify-content-center border border-5 border-white mb-4" style="width: 75px; height: 75px;">
+                                <a class="btn btn-square border-transparent"><i class="fa fa-graduation-cap fa-2x"></i></a>
+                            </div>
+                            <h4 class="mb-3">Data Programming Using R Framework</h4>
+                            <p class="mb-3" style="text-align:justify;">Become a professional R Developer by learning essential skills to write efficient R code, automate tasks, plus efficient file sharing and collaboration.</p>
+							
+                            <p class="text fw-medium"><i class="fa fa-check me-2"></i>Quality & Efficient Code</p>
+                            <p class="text fw-medium"><i class="fa fa-check me-2"></i>Key Data Structure Usage</p>
+                            <p class="text fw-medium"><i class="fa fa-check me-2"></i>Version COntrol Using Git</p>
+							<p class="text fw-medium"><i class="fa fa-check me-2"></i>R Object-Orieted Programming</p>
+							<p class="text fw-medium"><i class="fa fa-check me-2"></i>Data Optimization & Profiling</p>
+							<p class="text fw-medium"><i class="fa fa-clock me-2"></i>Duration: (6 Weeks)</p>
+							
+							
+                            <button onclick="handleButtonClick('btnr')" class="btn btn-primary text-white w-100 mt-2">Proceed to Pay<i class="fa fa-arrow-right text-white ms-2"></i></button>
+                        </div>						
+						
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+	
+	</section>
+    <!-- Service End A -->
+
+		
+	
+    <!-- Service Start B-->
+	<section id="Accelerated-Programs" class="Accelerated-Programs">
+    <div class="container-fluid py-5 px-4 px-lg-0">
+        <div class="row g-0">
+			
+			
+			
+            <div class="col-md-12 col-lg-9">
+                <div class="ms-lg-5 ps-lg-5">
+                    <div class="text-center text-lg-start wow fadeInUp" data-wow-delay="0.1s">
+                        <h6 class="text-secondary text-uppercase">Advanced Courses & Collaborations</h6>
+                        <h1 class="text-dark mb-5">Explore Our Courses</h1>
+                    </div>
+					
+                    <div class="owl-carousel service-carousel position-relative wow fadeInUp" data-wow-delay="0.1s">
+                        
+                        <div class="bg-light p-4">
+                            <div class="d-flex align-items-center justify-content-center border border-5 border-white mb-4" style="width: 75px; height: 75px;">
+								 <a class="btn btn-square border-transparent"><i class="fa fa-graduation-cap fa-2x"></i></a>
+                                     </div>
+							
+                            <h4 class="mb-3">Accelerated Data Analysis (Pro Plan)</h4>
+                            <p class="mb-3" style="text-align:justify;">This is an all-in-one advanced course that helps compile the study of data analytical tools including, Excel, Power BI, SQL and Python for data visualization</p>
+							
+                            <p class="text fw-medium"><i class="fa fa-check me-2"></i>Real-World Datasets Usage</p>
+                            <p class="text fw-medium"><i class="fa fa-check me-2"></i>Exclusive Data Tools Usage</p>
+                            <p class="text fw-medium"><i class="fa fa-check me-2"></i>Cross-Platform Integration</p>
+							<p class="text fw-medium"><i class="fa fa-check me-2"></i>Universal Data Query Mastery</p>
+							<p class="text fw-medium"><i class="fa fa-check me-2"></i>Real Time Industrial Analysis</p>
+							<p class="text fw-medium"><i class="fa fa-clock me-2"></i>Duration: (12 Weeks)</p>
+							
+                            <button onclick="handleButtonClick('btnaccelerated')" class="btn btn-primary text-white w-100 mt-2">Proceed to Pay<i class="fa fa-arrow-right text-white ms-2"></i></button>
+                        </div>
+
+
+						
+						
+                        <div class="bg-light p-4">
+                            <div class="d-flex align-items-center justify-content-center border border-5 border-white mb-4" style="width: 75px; height: 75px;">
+                                <a class="btn btn-square border-transparent"><i class="fa fa-graduation-cap fa-2x"></i></a>
+                            </div>
+                            <h4 class="mb-3">Relational Database Management (RDBMS)</h4>
+                            <p class="mb-3" style="text-align:justify;">Exclusive RDBMS learning structure facilitated into all modern database systems such as MySQL, Microsoft SQL Server, Oracle, and Microsoft Access</p>
+							
+                            <p class="text fw-medium"><i class="fa fa-check me-2"></i>NoSQl Funtion implementation</p>
+                            <p class="text fw-medium"><i class="fa fa-check me-2"></i>Expertise in Database Manag.</p>
+                            <p class="text fw-medium"><i class="fa fa-check me-2"></i>Data Automation & Scripting</p>
+							<p class="text fw-medium"><i class="fa fa-check me-2"></i>Cloud  Storage Management</p>
+							<p class="text fw-medium"><i class="fa fa-check me-2"></i>Data Security & Protection</p>
+							<p class="text fw-medium"><i class="fa fa-clock me-2"></i>Duration: (4 Weeks)</p>
+							
+							
+                            <button onclick="handleButtonClick('btnrdbms')" class="btn btn-primary text-white w-100 mt-2">Proceed to Pay<i class="fa fa-arrow-right text-white ms-2"></i></button>
+                        </div>						
+												
+						
+                        <div class="bg-light p-4">
+                            <div class="d-flex align-items-center justify-content-center border border-5 border-white mb-4" style="width: 75px; height: 75px;">
+                                <a class="btn btn-square border-transparent"><i class="fa fa-graduation-cap fa-2x"></i></a>
+                            </div>
+                            <h4 class="mb-3">Business Management & Intelligence</h4>
+                            <p class="mb-3" style="text-align:justify;">Learn about the system of constructiing and managing projects, business data, time management and market reports, all for industrial efficiency</p>
+							
+                            <p class="text fw-medium"><i class="fa fa-check me-2"></i>Data Management in Account</p>
+                            <p class="text fw-medium"><i class="fa fa-check me-2"></i>Corporate Team Management</p>
+                            <p class="text fw-medium"><i class="fa fa-check me-2"></i>Business Solution Softwares</p>
+							<p class="text fw-medium"><i class="fa fa-check me-2"></i>Human Resource Management</p>
+							<p class="text fw-medium"><i class="fa fa-check me-2"></i>Exclusive Project Management</p>
+							<p class="text fw-medium"><i class="fa fa-clock me-2"></i>Duration: (8 Weeks)</p>
+							
+							
+                            <button onclick="handleButtonClick('btnbm')" class="btn btn-primary text-white w-100 mt-2">Proceed to Pay<i class="fa fa-arrow-right text-white ms-2"></i></button>
+                        </div>
+
+
+						
+                        <div class="bg-light p-4">
+                            <div class="d-flex align-items-center justify-content-center border border-5 border-white mb-4" style="width: 75px; height: 75px;">
+                                <a class="btn btn-square border-transparent"><i class="fa fa-graduation-cap fa-2x"></i></a>
+                            </div>
+                            <h4 class="mb-3">Data Science & Programming (Git Control)</h4>
+                            <p class="mb-3" style="text-align:justify;">Learn to extract insights and build predictive models using data and elements of statistics & math, programming, data visualization, machine learning</p>
+							
+                            <p class="text fw-medium"><i class="fa fa-check me-2"></i>Data Structures & Control</p>
+                            <p class="text fw-medium"><i class="fa fa-check me-2"></i>Statistics & Probabilities</p>
+                            <p class="text fw-medium"><i class="fa fa-check me-2"></i>Exploratory Data Analysis</p>
+							<p class="text fw-medium"><i class="fa fa-check me-2"></i>Data Wrangling & Cleaning</p>
+							<p class="text fw-medium"><i class="fa fa-check me-2"></i>Machine Learning Algorithms</p>
+							<p class="text fw-medium"><i class="fa fa-clock me-2"></i>Duration: (12 Weeks)</p>
+							
+							
+                            <button onclick="handleButtonClick('btndatascience')" class="btn btn-primary text-white w-100 mt-2">Proceed to Pay<i class="fa fa-arrow-right text-white ms-2"></i></button>
+                        </div>						
+						
+						
+                    </div>
+                </div>
+            </div>
+			
+			
+            <div class="col-lg-3 d-none d-lg-flex">
+                <div class="d-flex align-items-center justify-content-center bg-dark w-100 h-100">
+                    <h1 class="display-3 text-white m-0" style="transform: rotate(-90deg);">Accelerated Programs</h1>
+                </div>
+            </div>			
+			
+			
+			
+			
+        </div>
+    </div>
+	</section>
+    <!-- Service End B-->
+	
+	
+	
+    <!-- Service Start C-->
+	<section id="Software-Development" class="Software-Development">
+    <div class="container-fluid py-5 px-4 px-lg-0">
+        <div class="row g-0">
+            <div class="col-lg-3 d-none d-lg-flex">
+                <div class="d-flex align-items-center justify-content-center bg-dark w-100 h-100">
+                    <h1 class="display-3 text-white m-0" style="transform: rotate(-90deg);">Software Development</h1>
+                </div>
+            </div>
+            <div class="col-md-12 col-lg-9">
+                <div class="ms-lg-5 ps-lg-5">
+                    <div class="text-center text-lg-start wow fadeInUp" data-wow-delay="0.1s">
+                        <h6 class="text-secondary text-uppercase">Custom Software Development</h6>
+                        <h1 class="text-dark mb-5">Explore Our Courses</h1>
+                    </div>
+					
+                    <div class="owl-carousel service-carousel position-relative wow fadeInUp" data-wow-delay="0.1s">
+                        
+                        <div class="bg-light p-4">
+                            <div class="d-flex align-items-center justify-content-center border border-5 border-white mb-4" style="width: 75px; height: 75px;">
+								 <a class="btn btn-square border-transparent"><i class="fa fa-graduation-cap fa-2x"></i></a>
+                                     </div>
+							
+                            <h4 class="mb-3">Introduction To Software Development</h4>
+                            <p class="mb-3" style="text-align:justify;">Learn the essentials of sofrtware developer, the course guides you into understanding the basics or foundational principles and logics of programming</p>
+							
+							<p class="text fw-medium"><i class="fa fa-check me-2"></i>Intro To Computer Science</p>
+							<p class="text fw-medium"><i class="fa fa-check me-2"></i>Understanding Web Structures</p>
+                            <p class="text fw-medium"><i class="fa fa-check me-2"></i>Programming Fundamentals</p>
+                            <p class="text fw-medium"><i class="fa fa-check me-2"></i>Structured Language Basics</p>
+                            <p class="text fw-medium"><i class="fa fa-check me-2"></i>Version Control Using Git</p>
+
+							<p class="text fw-medium"><i class="fa fa-clock me-2"></i>Duration: (6 Weeks)</p>
+							
+                            <button onclick="handleButtonClick('btnsoftware')" class="btn btn-primary text-white w-100 mt-2">Proceed to Pay<i class="fa fa-arrow-right text-white ms-2"></i></button>
+                        </div>
+
+
+						
+						
+                        <div class="bg-light p-4">
+                            <div class="d-flex align-items-center justify-content-center border border-5 border-white mb-4" style="width: 75px; height: 75px;">
+                                <a class="btn btn-square border-transparent"><i class="fa fa-graduation-cap fa-2x"></i></a>
+                            </div>
+                            <h4 class="mb-3">Front-End Development Frameworks</h4>
+                            <p class="mb-3" style="text-align:justify;">Learn the essential skills of a frontend developer from our list of robust tools and solutions, including; HTML, CSS & TAilwind and Javascripts (REACT & Vue)</p>
+							
+                            <p class="text fw-medium"><i class="fa fa-check me-2"></i>Intro. To Web Structures & Git</p>
+                            <p class="text fw-medium"><i class="fa fa-check me-2"></i>Front-End Frameworks & Tools</p>
+                            <p class="text fw-medium"><i class="fa fa-check me-2"></i>Web Styling In Tailwind, SCSS</p>
+							<p class="text fw-medium"><i class="fa fa-check me-2"></i>Cross-Platform Functionality</p>
+							<p class="text fw-medium"><i class="fa fa-check me-2"></i>Dynamism Using Javascripts</p>
+							<p class="text fw-medium"><i class="fa fa-clock me-2"></i>Duration: (12 Weeks)</p>
+							
+							
+                            <button onclick="handleButtonClick('btnfront')" class="btn btn-primary text-white w-100 mt-2">Proceed to Pay<i class="fa fa-arrow-right text-white ms-2"></i></button>
+                        </div>						
+												
+						
+                        <div class="bg-light p-4">
+                            <div class="d-flex align-items-center justify-content-center border border-5 border-white mb-4" style="width: 75px; height: 75px;">
+                                <a class="btn btn-square border-transparent"><i class="fa fa-graduation-cap fa-2x"></i></a>
+                            </div>
+                            <h4 class="mb-3">Back-End Development Framework </h4>
+                            <p class="mb-3" style="text-align:justify;">Channel your course to understanding the funtions client-server infrastructure, backend tools and languages and Database Solution Integration</p>
+							
+                            <p class="text fw-medium"><i class="fa fa-check me-2"></i>RESTful API Designs (JSON)</p>
+                            <p class="text fw-medium"><i class="fa fa-check me-2"></i>Client-Server Architecture</p>
+                            <p class="text fw-medium"><i class="fa fa-check me-2"></i>Version Control Using Git</p>
+							<p class="text fw-medium"><i class="fa fa-check me-2"></i>Python & Node.js Integration</p>
+							<p class="text fw-medium"><i class="fa fa-check me-2"></i>SQL, NoSQL & CRUD Operation</p>
+							<p class="text fw-medium"><i class="fa fa-clock me-2"></i>Duration: (12 Weeks)</p>
+							
+							
+                            <button onclick="handleButtonClick('btnback')" class="btn btn-primary text-white w-100 mt-2">Proceed to Pay<i class="fa fa-arrow-right text-white ms-2"></i></button>
+                        </div>
+
+										
+                        <div class="bg-light p-4">
+                            <div class="d-flex align-items-center justify-content-center border border-5 border-white mb-4" style="width: 75px; height: 75px;">
+                                <a class="btn btn-square border-transparent"><i class="fa fa-graduation-cap fa-2x"></i></a>
+                            </div>
+                            <h4 class="mb-3">Full-Stack Software Development</h4>
+                            <p class="mb-3" style="text-align:justify;">Combine the vast function of frontend development with backend development to provide industry-ready solutions including, IaaS, SaaS and PaaS</p>
+							
+                            <p class="text fw-medium"><i class="fa fa-check me-2"></i>Overview on Frontend Tools</p>
+                            <p class="text fw-medium"><i class="fa fa-check me-2"></i>Overview on Backend Tools</p>
+                            <p class="text fw-medium"><i class="fa fa-check me-2"></i>Version Control Using Git</p>
+							<p class="text fw-medium"><i class="fa fa-check me-2"></i>System DevOps & Deployment</p>
+							<p class="text fw-medium"><i class="fa fa-check me-2"></i>Data Optimization & Profiling</p>
+							<p class="text fw-medium"><i class="fa fa-clock me-2"></i>Duration: (20 Weeks)</p>
+							
+							
+                            <button onclick="handleButtonClick('btnfullstack')" class="btn btn-primary text-white w-100 mt-2">Proceed to Pay<i class="fa fa-arrow-right text-white ms-2"></i></button>
+                        </div>						
+						
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+	</section>
+    <!-- Service End C -->
+
+
+
+
+    <!-- Service Start D-->
+	<section id="Exclusive-Services" class="Exclusive-Services">
+    <div class="container-fluid py-5 px-4 px-lg-0">
+        <div class="row g-0">
+			
+			
+			
+            <div class="col-md-12 col-lg-9">
+                <div class="ms-lg-5 ps-lg-5">
+                    <div class="text-center text-lg-start wow fadeInUp" data-wow-delay="0.1s">
+                        <h6 class="text-secondary text-uppercase">Professional Services</h6>
+                        <h1 class="text-dark mb-5">Explore Our Related Services</h1>
+                    </div>
+					
+                    <div class="owl-carousel service-carousel position-relative wow fadeInUp" data-wow-delay="0.1s">
+                        
+                        <div class="bg-light p-4">
+                            <div class="d-flex align-items-center justify-content-center border border-5 border-white mb-4" style="width: 75px; height: 75px;">
+								 <a class="btn btn-square border-transparent"><i class="fa fa-graduation-cap fa-2x"></i></a>
+                                     </div>
+							
+                            <h4 class="mb-3">Corporate Business & Staffers Training</h4>
+                            <p class="mb-3" style="text-align:justify;">Enhance your productivity and efficiency by engaging your staffers in growth & purpose driving taining, which includes the use of high-end business tools.</p>
+							
+                            <p class="text fw-medium"><i class="fa fa-check me-2"></i>Business Tools & Apps Usage</p>
+                            <p class="text fw-medium"><i class="fa fa-check me-2"></i>Project Management Solutions</p>
+                            <p class="text fw-medium"><i class="fa fa-check me-2"></i>Multi-level Implementation</p>
+							<p class="text fw-medium"><i class="fa fa-check me-2"></i>Growth Profiling & Assessment</p>
+							<p class="text fw-medium"><i class="fa fa-check me-2"></i>Real Time Industrial Analysis</p>
+							<p class="text fw-medium"><i class="fa fa-clock me-2"></i>24/7 Technical Support Team</p>
+							
+                            <button onclick="handleButtonClick('btncb')" class="btn btn-primary text-white w-100 mt-2">Proceed to Pay<i class="fa fa-arrow-right text-white ms-2"></i></button>
+                        </div>
+
+
+
+                        <div class="bg-light p-4">
+                            <div class="d-flex align-items-center justify-content-center border border-5 border-white mb-4" style="width: 75px; height: 75px;">
+                                <a class="btn btn-square border-transparent"><i class="fa fa-graduation-cap fa-2x"></i></a>
+                            </div>
+                            <h4 class="mb-3">Personal Training / Career Coaching </h4>
+                            <p class="mb-3" style="text-align:justify;">Interested in learning about career path and trending skills in high-demand in this 21st century, we have you covered. Send a mail to us to get started.</p>
+							
+                            <p class="text fw-medium"><i class="fa fa-check me-2"></i>Uniterrupted Talk Sessions</p>
+                            <p class="text fw-medium"><i class="fa fa-check me-2"></i>Expertise in Human Resource</p>
+                            <p class="text fw-medium"><i class="fa fa-check me-2"></i>Real-Time Job Notifications</p>
+							<p class="text fw-medium"><i class="fa fa-check me-2"></i>Beginner - Expert Skills Guide</p>
+							<p class="text fw-medium"><i class="fa fa-check me-2"></i>Discounted Programs Benefits</p>
+							<p class="text fw-medium"><i class="fa fa-clock me-2"></i>24/7 Technical Support Team</p>
+							
+							
+                            <button onclick="handleButtonClick('btnpt')" class="btn btn-primary text-white w-100 mt-2">Proceed to Pay<i class="fa fa-arrow-right text-white ms-2"></i></button>
+                        </div>						
+												
+						
+                        <div class="bg-light p-4">
+                            <div class="d-flex align-items-center justify-content-center border border-5 border-white mb-4" style="width: 75px; height: 75px;">
+                                <a class="btn btn-square border-transparent"><i class="fa fa-graduation-cap fa-2x"></i></a>
+                            </div>
+                            <h4 class="mb-3">Health Care Analytics Solution (SaaS)</h4>
+                            <p class="mb-3" style="text-align:justify;">Our solution helps you leverage data analysis to improve patient outcomes, reduce costs, and enhance overall healthcare delivery processes. </p>
+							
+                            <p class="text fw-medium"><i class="fa fa-check me-2"></i>Data Integration & Management</p>
+                            <p class="text fw-medium"><i class="fa fa-check me-2"></i>Statistical & Predictive Methods</p>
+                            <p class="text fw-medium"><i class="fa fa-check me-2"></i>Clinial Decision Supports</p>
+							<p class="text fw-medium"><i class="fa fa-check me-2"></i>Censored Health Management</p>
+							<p class="text fw-medium"><i class="fa fa-check me-2"></i>Data Visualization & Reporting</p>
+							<p class="text fw-medium"><i class="fa fa-clock me-2"></i>24/7 Technical Support Team</p>
+							
+							
+                            <button onclick="handleButtonClick('btnhealth')" class="btn btn-primary text-white w-100 mt-2">Proceed to Pay<i class="fa fa-arrow-right text-white ms-2"></i></button>
+                        </div>						
+																		
+						
+                        <div class="bg-light p-4">
+                            <div class="d-flex align-items-center justify-content-center border border-5 border-white mb-4" style="width: 75px; height: 75px;">
+                                <a class="btn btn-square border-transparent"><i class="fa fa-server fa-2x"></i></a>
+                            </div>
+                            <h4 class="mb-3">Out-sourced Services & Products  </h4>
+                            <p class="mb-3" style="text-align:justify;">We provide unwavering and top-notch technical services that includes cyber security and maintenace, Software solutions, data engineering etc.</p>
+							
+                            <p class="text fw-medium"><i class="fa fa-check me-2"></i>Cyber Security & Maintenance</p>
+                            <p class="text fw-medium"><i class="fa fa-check me-2"></i>Business Websites Designs</p>
+                            <p class="text fw-medium"><i class="fa fa-check me-2"></i>Corporate Data Structures</p>
+							<p class="text fw-medium"><i class="fa fa-check me-2"></i>Human Resource Management</p>
+							<p class="text fw-medium"><i class="fa fa-check me-2"></i>Exclusive Project Management</p>
+							<p class="text fw-medium"><i class="fa fa-clock me-2"></i>24/7 Technical Support Team</p>
+							
+							
+                            <a href="mailto:info@catalysttech.tech" class="btn btn-primary text-white w-100 mt-2">Make More Enquiries<i class="fa fa-arrow-right text-white ms-2"></i></a>
+                        </div>
+
+										
+                        <div class="bg-light p-4">
+                            <div class="d-flex align-items-center justify-content-center border border-5 border-white mb-4" style="width: 75px; height: 75px;">
+                                <a class="btn btn-square border-transparent"><i class="fa fa-graduation-cap fa-2x"></i></a>
+                            </div>
+                            <h4 class="mb-3">Upcoming Educational Courses & Trainings</h4>
+                            <p class="mb-3" style="text-align:justify;">Stay tunned for more of our upcoming educational materials and course contents to enhance your credibility and knowledge base in this demanding century</p>
+							
+                            <p class="text fw-medium"><i class="fa fa-check me-2"></i>Ethical Cyber Security</p>
+                            <p class="text fw-medium"><i class="fa fa-check me-2"></i>Game Modeling-Development</p>
+                            <p class="text fw-medium"><i class="fa fa-check me-2"></i>Cloud Computation & DevOps</p>
+							<p class="text fw-medium"><i class="fa fa-check me-2"></i>AI Infrastructure & Tools</p>
+							<p class="text fw-medium"><i class="fa fa-check me-2"></i>Advanced Machine Learning</p>
+							<p class="text fw-medium"><i class="fa fa-clock me-2"></i>24/7 Technical Support Team</p>
+							
+							
+                            <a href="mailto:info@catalysttech.tech" class="btn btn-primary text-white w-100 mt-2">Make More Enquiries<i class="fa fa-arrow-right text-white ms-2"></i></a>
+                        </div>						
+						
+						
+                    </div>
+                </div>
+            </div>
+			
+			
+            <div class="col-lg-3 d-none d-lg-flex">
+                <div class="d-flex align-items-center justify-content-center bg-dark w-100 h-100">
+                    <h1 class="display-3 text-white m-0" style="transform: rotate(-90deg);">Exclusive Services</h1>
+                </div>
+            </div>			
+			
+			
+			
+			
+        </div>
+    </div>
+	</section>
+    <!-- Service End D-->
+	
+	
+	
+    <!-- Testimonial Start -->
+    <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="container">
+            <div class="text-center">
+                <h6 class="text-secondary text-uppercase">Student Testimonials!</h6>
+                <h1 class="text-dark mb-5">Our Reviews!</h1>
+            </div>
+            <div class="owl-carousel testimonial-carousel position-relative wow fadeInUp" data-wow-delay="0.1s">
+                <div class="testimonial-item text-center">
+                    <div class="testimonial-text bg-light text-center p-4 mb-4">
+                        <p class="mb-0">Great tutor, lovely, lively and knowledge imbound sessions. The experience is top-notch with hands-on practicals & assessments</p>
+                    </div>
+                    <img class="bg-light rounded-circle p-2 mx-auto mb-2" src="img/Adult-1.jpeg" style="width: 80px; height: 80px;">
+                    <div class="mb-2">
+                        <small class="fa fa-star text-secondary"></small>
+                        <small class="fa fa-star text-secondary"></small>
+                        <small class="fa fa-star text-secondary"></small>
+                        <small class="fa fa-star text-secondary"></small>
+                        <small class="fa fa-star text-secondary"></small>
+                    </div>
+                    <h5 class="mb-1">Ousmane, D.</h5>
+                    <p class="m-0">Data Analysis</p>
+                </div>
+                <div class="testimonial-item text-center">
+                    <div class="testimonial-text bg-light text-center p-4 mb-4">
+                        <p class="mb-0">Modest and simplified learning techniques, approach and resolutions that best communicates the knowledge. Great tutors!</p>
+                    </div>
+                    <img class="bg-light rounded-circle p-2 mx-auto mb-2" src="img/Adult-2.jpeg" style="width: 80px; height: 80px;">
+                    <div class="mb-2">
+                        <small class="fa fa-star text-secondary"></small>
+                        <small class="fa fa-star text-secondary"></small>
+                        <small class="fa fa-star text-secondary"></small>
+                        <small class="fa fa-star text-secondary"></small>
+                        <small class="fa fa-star text-secondary"></small>
+                    </div>
+                    <h5 class="mb-1">Victoria, A.</h5>
+                    <p class="m-0">Frontend Development</p>
+                </div>
+                <div class="testimonial-item text-center">
+                    <div class="testimonial-text bg-light text-center p-4 mb-4">
+                        <p class="mb-0">Astonishing course contents and self-learning pace.... Feels energetic & engaging, yet compunding and loaded. Good community!</p>
+                    </div>
+                    <img class="bg-light rounded-circle p-2 mx-auto mb-2" src="img/Adult-4.jpeg" style="width: 80px; height: 80px;">
+                    <div class="mb-2">
+                        <small class="fa fa-star text-secondary"></small>
+                        <small class="fa fa-star text-secondary"></small>
+                        <small class="fa fa-star text-secondary"></small>
+                        <small class="fa fa-star text-secondary"></small>
+                        <small class="fa fa-star text-secondary"></small>
+                    </div>
+                    <h5 class="mb-1">Austin, J.</h5>
+                    <p class="m-0">Cyber Security</p>
+                </div>
+                <div class="testimonial-item text-center">
+                    <div class="testimonial-text bg-light text-center p-4 mb-4">
+                        <p class="mb-0">Flexiible program calendar that helps me study at self-paced time, considerable fees and cross-industries accetance. Great Academy!</p>
+                    </div>
+                    <img class="bg-light rounded-circle p-2 mx-auto mb-2" src="img/Adult-3.jpeg" style="width: 80px; height: 80px;">
+                    <div class="mb-2">
+                        <small class="fa fa-star text-secondary"></small>
+                        <small class="fa fa-star text-secondary"></small>
+                        <small class="fa fa-star text-secondary"></small>
+                        <small class="fa fa-star text-secondary"></small>
+                        <small class="fa fa-star text-secondary"></small>
+                    </div>
+                    <h5 class="mb-1">Olivia, D.</h5>
+                    <p class="m-0">Software Development</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Testimonial End -->
+
+
+
+
+
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-light mb-4">Address</h4>
+                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Massachusetts, USA</p>
+                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+1-774-329-6133</p>
+                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@catalysttech.tech</p>
+                    <div class="d-flex pt-2">
+                        <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-youtube"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-light mb-4">Opening Hours</h4>
+                    <h6 class="text-light">Monday - Friday:</h6>
+                    <p class="mb-4">09.00 AM - 06.00 PM</p>
+                    <h6 class="text-light">Saturdays Only:</h6>
+                    <p class="mb-0">09.00 AM - 04.00 PM</p>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-light mb-4">Services</h4>
+                    <a class="btn btn-link" href="#">Career Coaching</a>
+                    <a class="btn btn-link" href="#">Certifications & Exams</a>
+                    <a class="btn btn-link" href="#">Live Training Sessions</a>
+                    <a class="btn btn-link" href="#">Book for Consultation</a>
+                    <a class="btn btn-link" href="#">Locate Region Operator</a>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-light mb-4">Newsletter</h4>
+                    <p>Subscribe to our news chanel for more information and weekly updates</p>
+                    <div class="position-relative mx-auto" style="max-width: 400px;">
+                        <input class="form-control border-0 w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
+                        <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">Sign Up</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="copyright">
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                        &copy; 2025. Catalyst Tech Academy</a>, All Right Reserved.
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-0 back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/tempusdominus/js/moment.min.js"></script>
+    <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
+    <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
