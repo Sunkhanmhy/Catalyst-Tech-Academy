@@ -836,7 +836,7 @@
             <div class="copyright">
                 <div class="row">
                     <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                        &copy; 2025. Catalyst Tech Academy</a>, All Right Reserved.
+                        &copy; <span id="current-year"></span> Catalyst Tech Academy</a>, All Right Reserved.
                     </div>
 
                 </div>
@@ -861,6 +861,15 @@
     <script src="lib/tempusdominus/js/moment.min.js"></script>
     <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
     <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          const yearSpan = document.getElementById('current-year');
+          if (yearSpan) {
+            yearSpan.textContent = new Date().getFullYear();
+          }
+        });
+    </script>
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
